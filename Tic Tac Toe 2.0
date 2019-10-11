@@ -1,0 +1,50 @@
+import random
+
+board = ['1','2','3','4','5','6','7','8']
+boardcheck = list(range(1,10))
+
+def showboard(board):
+  print("----------------")
+  print(f'|{board[0]}|{board[1]}|{board[2]}|')
+  print("----------------")
+  print(f'|{board[3]}|{board[4]}|{board[5]}|')
+  print("----------------")
+  print(f'|{board[6]}|{board[7]}|{board[8]}|')
+  print("----------------")
+ 
+def winlose():
+  if (board[0]==board[1]==board[2] or board[3]==board[4]==board[5] or board[6]==board[7]==board[8] or board[0]==board[3]==board[6] or board[1]==board[4]==board[7] or board[2]==board[5]==board[8] or board[0]==board[4]==board[8] or board[2]==board[4]==board[6])==playimage:
+    print("You Win!!!")
+  elif boardcheck == []:
+    print("Draw")
+  elif (board[0]==board[1]==board[2] or board[3]==board[4]==board[5] or board[6]==board[7]==board[8] or board[0]==board[3]==board[6] or board[1]==board[4]==board[7] or board[2]==board[5]==board[8] or board[0]==board[4]==board[8] or board[2]==board[4]==board[6])== comimage:
+    print("You Lose!!!")
+
+print("Tic Tac Toe")
+name = input("What's your name? ")
+while True:
+  playimage = input(name + " ,please choose your image 'O' or 'X' : \n if you want to leave enter no")
+  if image.upper() == "O":
+    comimage = "X"
+    break
+  elif image.upper() == "X":
+    comimage = "O"
+    break
+  while True:
+    showboard(board)
+    player = input("Please choose the number:")
+    if player in boardcheck:
+      board[int(player)-1] = playimage
+      boardcheck.remove(int(player))
+      showboard(board)
+      if winlose() True:
+        break
+      com = random.choice(boardcheck)
+      board[com-1] = "comimage"
+      boardcheck.remove(com)
+      showboard(board)
+      if winlose() True:
+        break
+    
+    
+    
